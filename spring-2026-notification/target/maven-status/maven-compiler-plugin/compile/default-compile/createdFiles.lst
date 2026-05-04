@@ -1,0 +1,17 @@
+edu/uoc/epcsd/notification/application/rest/dtos/GetUserResponse.class
+edu/uoc/epcsd/notification/application/kafka/MicrocredentialMessage$MicrocredentialMessageBuilder.class
+edu/uoc/epcsd/notification/application/kafka/MicrocredentialMessage.class
+edu/uoc/epcsd/notification/NotificationApplication.class
+edu/uoc/epcsd/notification/domain/service/NotificationServiceImpl.class
+edu/uoc/epcsd/notification/application/rest/dtos/GetUserResponse$GetUserResponseBuilder.class
+edu/uoc/epcsd/notification/application/kafka/KafkaClassListener.class
+edu/uoc/epcsd/notification/application/rest/dtos/GetProductResponse.class
+edu/uoc/epcsd/notification/domain/MicrocredentialStatus.class
+edu/uoc/epcsd/notification/application/kafka/ProductMessage$ProductMessageBuilder.class
+edu/uoc/epcsd/notification/domain/service/NotificationService.class
+edu/uoc/epcsd/notification/application/rest/dtos/GetMicrocredentialResponse.class
+edu/uoc/epcsd/notification/application/kafka/KafkaConsumerConfig.class
+edu/uoc/epcsd/notification/application/kafka/KafkaConstants.class
+edu/uoc/epcsd/notification/application/rest/dtos/GetProductResponse$GetProductResponseBuilder.class
+edu/uoc/epcsd/notification/application/rest/dtos/GetMicrocredentialResponse$GetMicrocredentialResponseBuilder.class
+edu/uoc/epcsd/notification/application/kafka/ProductMessage.class

@@ -1,0 +1,495 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36medu.uoc.epcsd:notification[0;1m >---------------------[m
+[[1;34mINFO[m] [1mBuilding notification 0.0.1-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m>>> [0;32mspring-boot-maven-plugin:2.6.3:run[m [1m(default-cli)[0;1m > [0;1mtest-compile[m @ [36mnotification[0;1m >>>[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.2.0:resources[m [1m(default-resources)[m @ [36mnotification[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered properties files.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copying 0 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.14.1:compile[m [1m(default-compile)[m @ [36mnotification[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.2.0:testResources[m [1m(default-testResources)[m @ [36mnotification[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered properties files.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/jaume/UOC/PRAC2/spring-2026-notification/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.14.1:testCompile[m [1m(default-testCompile)[m @ [36mnotification[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m<<< [0;32mspring-boot-maven-plugin:2.6.3:run[m [1m(default-cli)[0;1m < [0;1mtest-compile[m @ [36mnotification[0;1m <<<[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.6.3:run[m [1m(default-cli)[m @ [36mnotification[0;1m ---[m
+[[1;34mINFO[m] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.3)
+
+2026-05-03 19:24:13.857  INFO 86350 --- [           main] e.u.e.n.NotificationApplication          : Starting NotificationApplication using Java 25.0.2 on PROADMIN-01 with PID 86350 (/home/jaume/UOC/PRAC2/spring-2026-notification/target/classes started by jaume in /home/jaume/UOC/PRAC2/spring-2026-notification)
+2026-05-03 19:24:13.859  INFO 86350 --- [           main] e.u.e.n.NotificationApplication          : No active profile set, falling back to default profiles: default
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/home/jaume/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.56/tomcat-embed-core-9.0.56.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-05-03 19:24:14.427  INFO 86350 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18083 (http)
+2026-05-03 19:24:14.434  INFO 86350 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-03 19:24:14.434  INFO 86350 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2026-05-03 19:24:14.493  INFO 86350 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-03 19:24:14.493  INFO 86350 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 604 ms
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::invokeCleaner has been called by nonapi.io.github.classgraph.utils.FileUtils (file:/home/jaume/.m2/repository/io/github/classgraph/classgraph/4.8.138/classgraph-4.8.138.jar)
+WARNING: Please consider reporting this to the maintainers of class nonapi.io.github.classgraph.utils.FileUtils
+WARNING: sun.misc.Unsafe::invokeCleaner will be removed in a future release
+2026-05-03 19:24:15.071  INFO 86350 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:19092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group-3-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group-3
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2026-05-03 19:24:15.164  INFO 86350 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2026-05-03 19:24:15.165  INFO 86350 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2026-05-03 19:24:15.165  INFO 86350 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1777829055164
+2026-05-03 19:24:15.166  INFO 86350 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group-3-1, groupId=group-3] Subscribed to topic(s): microcredential.microcredential_approved
+2026-05-03 19:24:15.172  INFO 86350 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:19092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group-4-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group-4
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2026-05-03 19:24:15.179  INFO 86350 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2026-05-03 19:24:15.179  INFO 86350 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2026-05-03 19:24:15.179  INFO 86350 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1777829055179
+2026-05-03 19:24:15.179  INFO 86350 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group-4-2, groupId=group-4] Subscribed to topic(s): microcredential.microcredential_rejected
+2026-05-03 19:24:15.180  INFO 86350 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:19092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group-1-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group-1
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-05-03 19:24:15.185  INFO 86350 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2026-05-03 19:24:15.185  INFO 86350 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2026-05-03 19:24:15.185  INFO 86350 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1777829055185
+2026-05-03 19:24:15.185  INFO 86350 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group-1-3, groupId=group-1] Subscribed to topic(s): product.unit_available
+2026-05-03 19:24:15.187  INFO 86350 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:19092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group-2-4
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group-2
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2026-05-03 19:24:15.191  INFO 86350 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2026-05-03 19:24:15.191  INFO 86350 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2026-05-03 19:24:15.191  INFO 86350 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1777829055191
+2026-05-03 19:24:15.192  INFO 86350 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group-2-4, groupId=group-2] Subscribed to topic(s): microcredential.microcredential_pending
+2026-05-03 19:24:15.200  INFO 86350 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18083 (http) with context path ''
+2026-05-03 19:24:15.205  INFO 86350 --- [           main] e.u.e.n.NotificationApplication          : Started NotificationApplication in 1.559 seconds (JVM running for 1.744)
+2026-05-03 19:24:15.346  INFO 86350 --- [ntainer#2-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group-3-1, groupId=group-3] Cluster ID: 0YqcsAnJQZ2vOy5d4rr3aA
+2026-05-03 19:24:15.346  INFO 86350 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group-1-3, groupId=group-1] Cluster ID: 0YqcsAnJQZ2vOy5d4rr3aA
+2026-05-03 19:24:15.346  INFO 86350 --- [ntainer#3-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group-4-2, groupId=group-4] Cluster ID: 0YqcsAnJQZ2vOy5d4rr3aA
+2026-05-03 19:24:15.346  INFO 86350 --- [ntainer#1-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group-2-4, groupId=group-2] Cluster ID: 0YqcsAnJQZ2vOy5d4rr3aA
+2026-05-03 19:24:15.347  INFO 86350 --- [ntainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-3-1, groupId=group-3] Discovered group coordinator localhost:19092 (id: 2147483646 rack: null)
+2026-05-03 19:24:15.347  INFO 86350 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1-3, groupId=group-1] Discovered group coordinator localhost:19092 (id: 2147483646 rack: null)
+2026-05-03 19:24:15.347  INFO 86350 --- [ntainer#3-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-4-2, groupId=group-4] Discovered group coordinator localhost:19092 (id: 2147483646 rack: null)
+2026-05-03 19:24:15.347  INFO 86350 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-2-4, groupId=group-2] Discovered group coordinator localhost:19092 (id: 2147483646 rack: null)
+2026-05-03 19:24:15.348  INFO 86350 --- [ntainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-3-1, groupId=group-3] (Re-)joining group
+2026-05-03 19:24:15.348  INFO 86350 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-2-4, groupId=group-2] (Re-)joining group
+2026-05-03 19:24:15.348  INFO 86350 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1-3, groupId=group-1] (Re-)joining group
+2026-05-03 19:24:15.348  INFO 86350 --- [ntainer#3-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-4-2, groupId=group-4] (Re-)joining group
+2026-05-03 19:24:15.355  INFO 86350 --- [ntainer#3-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-4-2, groupId=group-4] Request joining group due to: need to re-join with the given member-id
+2026-05-03 19:24:15.355  INFO 86350 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-2-4, groupId=group-2] Request joining group due to: need to re-join with the given member-id
+2026-05-03 19:24:15.355  INFO 86350 --- [ntainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-3-1, groupId=group-3] Request joining group due to: need to re-join with the given member-id
+2026-05-03 19:24:15.356  INFO 86350 --- [ntainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-3-1, groupId=group-3] (Re-)joining group
+2026-05-03 19:24:15.356  INFO 86350 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1-3, groupId=group-1] Request joining group due to: need to re-join with the given member-id
+2026-05-03 19:24:15.356  INFO 86350 --- [ntainer#3-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-4-2, groupId=group-4] (Re-)joining group
+2026-05-03 19:24:15.356  INFO 86350 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-2-4, groupId=group-2] (Re-)joining group
+2026-05-03 19:24:15.356  INFO 86350 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1-3, groupId=group-1] (Re-)joining group
+2026-05-03 19:24:18.358  INFO 86350 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1-3, groupId=group-1] Successfully joined group with generation Generation{generationId=15, memberId='consumer-group-1-3-c1f75122-d458-4df4-bc58-16dea323ac00', protocol='range'}
+2026-05-03 19:24:18.358  INFO 86350 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-2-4, groupId=group-2] Successfully joined group with generation Generation{generationId=15, memberId='consumer-group-2-4-dadbfc40-9472-49aa-b51b-86b84c7dfc6b', protocol='range'}
+2026-05-03 19:24:18.358  INFO 86350 --- [ntainer#3-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-4-2, groupId=group-4] Successfully joined group with generation Generation{generationId=15, memberId='consumer-group-4-2-956b30ab-7d84-4f84-8891-146dfc77c530', protocol='range'}
+2026-05-03 19:24:18.358  INFO 86350 --- [ntainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-3-1, groupId=group-3] Successfully joined group with generation Generation{generationId=15, memberId='consumer-group-3-1-180e7d7a-fa4c-4036-a80f-c728efb4ca96', protocol='range'}
+2026-05-03 19:24:18.359  INFO 86350 --- [ntainer#3-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-4-2, groupId=group-4] Finished assignment for group at generation 15: {consumer-group-4-2-956b30ab-7d84-4f84-8891-146dfc77c530=Assignment(partitions=[microcredential.microcredential_rejected-0])}
+2026-05-03 19:24:18.359  INFO 86350 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1-3, groupId=group-1] Finished assignment for group at generation 15: {consumer-group-1-3-c1f75122-d458-4df4-bc58-16dea323ac00=Assignment(partitions=[product.unit_available-0])}
+2026-05-03 19:24:18.359  INFO 86350 --- [ntainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-3-1, groupId=group-3] Finished assignment for group at generation 15: {consumer-group-3-1-180e7d7a-fa4c-4036-a80f-c728efb4ca96=Assignment(partitions=[microcredential.microcredential_approved-0])}
+2026-05-03 19:24:18.359  INFO 86350 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-2-4, groupId=group-2] Finished assignment for group at generation 15: {consumer-group-2-4-dadbfc40-9472-49aa-b51b-86b84c7dfc6b=Assignment(partitions=[microcredential.microcredential_pending-0])}
+2026-05-03 19:24:18.363  INFO 86350 --- [ntainer#3-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-4-2, groupId=group-4] Successfully synced group in generation Generation{generationId=15, memberId='consumer-group-4-2-956b30ab-7d84-4f84-8891-146dfc77c530', protocol='range'}
+2026-05-03 19:24:18.363  INFO 86350 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-2-4, groupId=group-2] Successfully synced group in generation Generation{generationId=15, memberId='consumer-group-2-4-dadbfc40-9472-49aa-b51b-86b84c7dfc6b', protocol='range'}
+2026-05-03 19:24:18.363  INFO 86350 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1-3, groupId=group-1] Successfully synced group in generation Generation{generationId=15, memberId='consumer-group-1-3-c1f75122-d458-4df4-bc58-16dea323ac00', protocol='range'}
+2026-05-03 19:24:18.363  INFO 86350 --- [ntainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-3-1, groupId=group-3] Successfully synced group in generation Generation{generationId=15, memberId='consumer-group-3-1-180e7d7a-fa4c-4036-a80f-c728efb4ca96', protocol='range'}
+2026-05-03 19:24:18.363  INFO 86350 --- [ntainer#3-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-4-2, groupId=group-4] Notifying assignor about the new Assignment(partitions=[microcredential.microcredential_rejected-0])
+2026-05-03 19:24:18.363  INFO 86350 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-2-4, groupId=group-2] Notifying assignor about the new Assignment(partitions=[microcredential.microcredential_pending-0])
+2026-05-03 19:24:18.363  INFO 86350 --- [ntainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-3-1, groupId=group-3] Notifying assignor about the new Assignment(partitions=[microcredential.microcredential_approved-0])
+2026-05-03 19:24:18.363  INFO 86350 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1-3, groupId=group-1] Notifying assignor about the new Assignment(partitions=[product.unit_available-0])
+2026-05-03 19:24:18.364  INFO 86350 --- [ntainer#3-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-4-2, groupId=group-4] Adding newly assigned partitions: microcredential.microcredential_rejected-0
+2026-05-03 19:24:18.364  INFO 86350 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1-3, groupId=group-1] Adding newly assigned partitions: product.unit_available-0
+2026-05-03 19:24:18.364  INFO 86350 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-2-4, groupId=group-2] Adding newly assigned partitions: microcredential.microcredential_pending-0
+2026-05-03 19:24:18.364  INFO 86350 --- [ntainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-3-1, groupId=group-3] Adding newly assigned partitions: microcredential.microcredential_approved-0
+2026-05-03 19:24:18.370  INFO 86350 --- [ntainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-3-1, groupId=group-3] Setting offset for partition microcredential.microcredential_approved-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:19092 (id: 1 rack: null)], epoch=0}}
+2026-05-03 19:24:18.370  INFO 86350 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1-3, groupId=group-1] Setting offset for partition product.unit_available-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:19092 (id: 1 rack: null)], epoch=0}}
+2026-05-03 19:24:18.370  INFO 86350 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-2-4, groupId=group-2] Setting offset for partition microcredential.microcredential_pending-0 to the committed offset FetchPosition{offset=8, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:19092 (id: 1 rack: null)], epoch=0}}
+2026-05-03 19:24:18.370  INFO 86350 --- [ntainer#3-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-4-2, groupId=group-4] Setting offset for partition microcredential.microcredential_rejected-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:19092 (id: 1 rack: null)], epoch=0}}
+2026-05-03 19:24:18.371  INFO 86350 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-2: partitions assigned: [microcredential.microcredential_pending-0]
+2026-05-03 19:24:18.371  INFO 86350 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-1: partitions assigned: [product.unit_available-0]
+2026-05-03 19:24:18.371  INFO 86350 --- [ntainer#3-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-4: partitions assigned: [microcredential.microcredential_rejected-0]
+2026-05-03 19:24:18.371  INFO 86350 --- [ntainer#2-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-3: partitions assigned: [microcredential.microcredential_approved-0]
+2026-05-03 19:24:32.740  INFO 86350 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-2-4, groupId=group-2] Revoke previously assigned partitions microcredential.microcredential_pending-0
+2026-05-03 19:24:32.740  INFO 86350 --- [ntainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-3-1, groupId=group-3] Revoke previously assigned partitions microcredential.microcredential_approved-0
+2026-05-03 19:24:32.740  INFO 86350 --- [ntainer#3-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-4-2, groupId=group-4] Revoke previously assigned partitions microcredential.microcredential_rejected-0
+2026-05-03 19:24:32.740  INFO 86350 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1-3, groupId=group-1] Revoke previously assigned partitions product.unit_available-0
+2026-05-03 19:24:32.741  INFO 86350 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-1: partitions revoked: [product.unit_available-0]
+2026-05-03 19:24:32.741  INFO 86350 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-2: partitions revoked: [microcredential.microcredential_pending-0]
+2026-05-03 19:24:32.741  INFO 86350 --- [ntainer#2-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-3: partitions revoked: [microcredential.microcredential_approved-0]
+2026-05-03 19:24:32.741  INFO 86350 --- [ntainer#3-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-4: partitions revoked: [microcredential.microcredential_rejected-0]
+2026-05-03 19:24:32.741  INFO 86350 --- [ntainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-3-1, groupId=group-3] Member consumer-group-3-1-180e7d7a-fa4c-4036-a80f-c728efb4ca96 sending LeaveGroup request to coordinator localhost:19092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2026-05-03 19:24:32.741  INFO 86350 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1-3, groupId=group-1] Member consumer-group-1-3-c1f75122-d458-4df4-bc58-16dea323ac00 sending LeaveGroup request to coordinator localhost:19092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2026-05-03 19:24:32.741  INFO 86350 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-2-4, groupId=group-2] Member consumer-group-2-4-dadbfc40-9472-49aa-b51b-86b84c7dfc6b sending LeaveGroup request to coordinator localhost:19092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2026-05-03 19:24:32.741  INFO 86350 --- [ntainer#3-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-4-2, groupId=group-4] Member consumer-group-4-2-956b30ab-7d84-4f84-8891-146dfc77c530 sending LeaveGroup request to coordinator localhost:19092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2026-05-03 19:24:32.741  INFO 86350 --- [ntainer#3-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-4-2, groupId=group-4] Resetting generation due to: consumer pro-actively leaving the group
+2026-05-03 19:24:32.741  INFO 86350 --- [ntainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-3-1, groupId=group-3] Resetting generation due to: consumer pro-actively leaving the group
+2026-05-03 19:24:32.741  INFO 86350 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-2-4, groupId=group-2] Resetting generation due to: consumer pro-actively leaving the group
+2026-05-03 19:24:32.741  INFO 86350 --- [ntainer#3-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-4-2, groupId=group-4] Request joining group due to: consumer pro-actively leaving the group
+2026-05-03 19:24:32.741  INFO 86350 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1-3, groupId=group-1] Resetting generation due to: consumer pro-actively leaving the group
+2026-05-03 19:24:32.741  INFO 86350 --- [ntainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-3-1, groupId=group-3] Request joining group due to: consumer pro-actively leaving the group
+2026-05-03 19:24:32.742  INFO 86350 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-2-4, groupId=group-2] Request joining group due to: consumer pro-actively leaving the group
+2026-05-03 19:24:32.742  INFO 86350 --- [ntainer#3-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group-4-2, groupId=group-4] Unsubscribed all topics or patterns and assigned partitions
+2026-05-03 19:24:32.742  INFO 86350 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1-3, groupId=group-1] Request joining group due to: consumer pro-actively leaving the group
+2026-05-03 19:24:32.742  INFO 86350 --- [ntainer#1-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group-2-4, groupId=group-2] Unsubscribed all topics or patterns and assigned partitions
+2026-05-03 19:24:32.742  INFO 86350 --- [ntainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group-1-3, groupId=group-1] Unsubscribed all topics or patterns and assigned partitions
+2026-05-03 19:24:32.742  INFO 86350 --- [ntainer#2-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group-3-1, groupId=group-3] Unsubscribed all topics or patterns and assigned partitions
+2026-05-03 19:24:32.742  INFO 86350 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1-3, groupId=group-1] Resetting generation due to: consumer pro-actively leaving the group
+2026-05-03 19:24:32.742  INFO 86350 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-2-4, groupId=group-2] Resetting generation due to: consumer pro-actively leaving the group
+2026-05-03 19:24:32.742  INFO 86350 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-1-3, groupId=group-1] Request joining group due to: consumer pro-actively leaving the group
+2026-05-03 19:24:32.742  INFO 86350 --- [ntainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-3-1, groupId=group-3] Resetting generation due to: consumer pro-actively leaving the group
+2026-05-03 19:24:32.742  INFO 86350 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-2-4, groupId=group-2] Request joining group due to: consumer pro-actively leaving the group
+2026-05-03 19:24:32.742  INFO 86350 --- [ntainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-3-1, groupId=group-3] Request joining group due to: consumer pro-actively leaving the group
+2026-05-03 19:24:32.742  INFO 86350 --- [ntainer#3-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-4-2, groupId=group-4] Resetting generation due to: consumer pro-actively leaving the group
+2026-05-03 19:24:32.742  INFO 86350 --- [ntainer#3-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-4-2, groupId=group-4] Request joining group due to: consumer pro-actively leaving the group
+2026-05-03 19:24:32.743  INFO 86350 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2026-05-03 19:24:32.744  INFO 86350 --- [ntainer#1-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2026-05-03 19:24:32.744  INFO 86350 --- [ntainer#2-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2026-05-03 19:24:32.744  INFO 86350 --- [ntainer#3-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2026-05-03 19:24:32.744  INFO 86350 --- [ntainer#1-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-05-03 19:24:32.744  INFO 86350 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-05-03 19:24:32.746  INFO 86350 --- [ntainer#2-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-05-03 19:24:32.746  INFO 86350 --- [ntainer#3-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-05-03 19:24:32.746  INFO 86350 --- [ntainer#1-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2026-05-03 19:24:32.746  INFO 86350 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2026-05-03 19:24:32.746  INFO 86350 --- [ntainer#2-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2026-05-03 19:24:32.746  INFO 86350 --- [ntainer#3-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2026-05-03 19:24:32.749  INFO 86350 --- [ntainer#3-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-group-4-2 unregistered
+2026-05-03 19:24:32.750  INFO 86350 --- [ntainer#3-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-4: Consumer stopped
+2026-05-03 19:24:32.750  INFO 86350 --- [ntainer#1-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-group-2-4 unregistered
+2026-05-03 19:24:32.750  INFO 86350 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-2: Consumer stopped
+2026-05-03 19:24:32.750  INFO 86350 --- [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-group-1-3 unregistered
+2026-05-03 19:24:32.750  INFO 86350 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-1: Consumer stopped
+2026-05-03 19:24:32.751  INFO 86350 --- [ntainer#2-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-group-3-1 unregistered
+2026-05-03 19:24:32.751  INFO 86350 --- [ntainer#2-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-3: Consumer stopped
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  20.580 s
+[[1;34mINFO[m] Finished at: 2026-05-03T19:24:32+02:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m

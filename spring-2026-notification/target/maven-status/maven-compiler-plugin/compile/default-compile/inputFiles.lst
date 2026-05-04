@@ -1,0 +1,12 @@
+/home/jaume/UOC/PRAC2/spring-2026-notification/src/main/java/edu/uoc/epcsd/notification/NotificationApplication.java
+/home/jaume/UOC/PRAC2/spring-2026-notification/src/main/java/edu/uoc/epcsd/notification/application/kafka/KafkaClassListener.java
+/home/jaume/UOC/PRAC2/spring-2026-notification/src/main/java/edu/uoc/epcsd/notification/application/kafka/KafkaConstants.java
+/home/jaume/UOC/PRAC2/spring-2026-notification/src/main/java/edu/uoc/epcsd/notification/application/kafka/KafkaConsumerConfig.java
+/home/jaume/UOC/PRAC2/spring-2026-notification/src/main/java/edu/uoc/epcsd/notification/application/kafka/MicrocredentialMessage.java
+/home/jaume/UOC/PRAC2/spring-2026-notification/src/main/java/edu/uoc/epcsd/notification/application/kafka/ProductMessage.java
+/home/jaume/UOC/PRAC2/spring-2026-notification/src/main/java/edu/uoc/epcsd/notification/application/rest/dtos/GetMicrocredentialResponse.java
+/home/jaume/UOC/PRAC2/spring-2026-notification/src/main/java/edu/uoc/epcsd/notification/application/rest/dtos/GetProductResponse.java
+/home/jaume/UOC/PRAC2/spring-2026-notification/src/main/java/edu/uoc/epcsd/notification/application/rest/dtos/GetUserResponse.java
+/home/jaume/UOC/PRAC2/spring-2026-notification/src/main/java/edu/uoc/epcsd/notification/domain/MicrocredentialStatus.java
+/home/jaume/UOC/PRAC2/spring-2026-notification/src/main/java/edu/uoc/epcsd/notification/domain/service/NotificationService.java
+/home/jaume/UOC/PRAC2/spring-2026-notification/src/main/java/edu/uoc/epcsd/notification/domain/service/NotificationServiceImpl.java
