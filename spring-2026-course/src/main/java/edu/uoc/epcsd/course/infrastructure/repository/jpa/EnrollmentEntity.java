@@ -59,8 +59,9 @@ public class EnrollmentEntity implements DomainTranslatable<Enrollment> {
                 .id(this.getId())
                 .student(this.getStudent())
                 .enrollmentDate(this.getEnrollmentDate())
-                .qualification(this.getQualification())                
+                .qualification(this.getQualification())
                 .status(this.getStatus())
+                .courseId(this.getCourse() != null ? this.getCourse().getId() : null)  // ← aquesta línia
                 .build();
     }
 }

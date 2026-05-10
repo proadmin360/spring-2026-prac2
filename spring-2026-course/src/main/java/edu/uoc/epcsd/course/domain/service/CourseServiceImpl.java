@@ -40,15 +40,128 @@ public class CourseServiceImpl implements CourseService {
         return courseRepository.getCourseById(courseId);
     }
         
-    // TODO findCourses()
     // TODO getEnrollmentsByCourse()
-    // TODO getEnrolledStudents()
-    // TODO createCourse()
-    // TODO modifyCourseDetails()
-    // TODO openEnrollment()
-    // TODO closeEnrollment()
+    // TODO getEnrolledStudents() 
     // TODO enrollInCourse()
     // TODO closeGradeReports()
-    // TODO closeCourse()
+
     
+    /**
+     * Retorna la llista de cursos disponibles al sistema.
+     *
+     * Desenvolupat per Jaume Jurado.
+     */
+    @Override
+    public List<Course> findCourses() {
+        return courseRepository.findCourses();
+    }
+
+    /**
+     * Modifica les dades d’un curs existent.
+     *
+     * El mètode comprova que el curs existeixi abans de desar-ne
+     * les noves dades.
+     *
+     * Desenvolupat per Jaume Jurado.
+     */
+    @Override
+    public Course modifyCourseDetails(Long courseId, Course course) {
+
+        Optional<Course> optionalCourse = courseRepository.getCourseById(courseId);
+
+        if (optionalCourse.isEmpty()) {
+            return null;
+        }
+
+        course.setId(courseId);
+
+        return courseRepository.save(course);
+    }
+
+    /**
+     * Crea un nou curs al sistema.
+     *
+     * El mètode desa el curs rebut al repositori.
+     *
+     * Desenvolupat per Jaume Jurado.
+     */
+    @Override
+    public Course createCourse(Course course) {
+        return courseRepository.save(course);
+    }
+
+    /**
+     * Obre el període d’inscripció d’un curs existent.
+     *
+     * El mètode comprova que el curs existeixi i actualitza
+     * el seu estat a ENROLLMENT_OPEN.
+     *
+     * Desenvolupat per Jaume Jurado.
+     */
+    @Override
+    public Boolean openEnrollment(Long courseId) {
+
+        Optional<Course> optionalCourse = courseRepository.getCourseById(courseId);
+
+        if (optionalCourse.isEmpty()) {
+            return false;
+        }
+
+        Course course = optionalCourse.get();
+        course.setStatus(CourseStatus.ENROLLMENT_OPEN);
+
+        courseRepository.save(course);
+
+        return true;
+    }
+
+    /**
+     * Tanca el període d’inscripció d’un curs existent.
+     *
+     * El mètode comprova que el curs existeixi i actualitza
+     * el seu estat a ACTIVE.
+     *
+     * Desenvolupat per Jaume Jurado.
+     */
+    @Override
+    public Boolean closeEnrollment(Long courseId) {
+
+        Optional<Course> optionalCourse = courseRepository.getCourseById(courseId);
+
+        if (optionalCourse.isEmpty()) {
+            return false;
+        }
+
+        Course course = optionalCourse.get();
+        course.setStatus(CourseStatus.ACTIVE);
+
+        courseRepository.save(course);
+
+        return true;
+    }
+    
+    /**
+     * Tanca un curs existent.
+     *
+     * El mètode comprova que el curs existeixi i, en cas afirmatiu,
+     * actualitza el seu estat a CLOSED i desa els canvis.
+     *
+     * Desenvolupat per Jaume Jurado.
+     */
+    @Override
+    public Boolean closeCourse(Long courseId) {
+
+        Optional<Course> optionalCourse = courseRepository.getCourseById(courseId);
+
+        if (optionalCourse.isEmpty()) {
+            return false;
+        }
+
+        Course course = optionalCourse.get();
+        course.setStatus(CourseStatus.CLOSED);
+
+        courseRepository.save(course);
+
+        return true;
+    }
 }

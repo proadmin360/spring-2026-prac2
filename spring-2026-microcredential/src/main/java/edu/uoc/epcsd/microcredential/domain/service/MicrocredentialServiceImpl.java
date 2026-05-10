@@ -119,7 +119,15 @@ public class MicrocredentialServiceImpl implements MicrocredentialService {
 
 		microcredential.setStatus(MicrocredentialStatus.REJECTED);
 
-		microcredentialRepository.save(microcredential);
+		Microcredential savedMicrocredential =
+				microcredentialRepository.save(microcredential);
+
+		MicrocredentialMessage message = MicrocredentialMessage.builder()
+				.microcredentialId(savedMicrocredential.getId())
+				.enrollment(savedMicrocredential.getEnrollment())
+				.build();
+
+		microcredentialKafkaTemplate.send("microcredential.microcredential_rejected", message);
 
 		return true;
 	}

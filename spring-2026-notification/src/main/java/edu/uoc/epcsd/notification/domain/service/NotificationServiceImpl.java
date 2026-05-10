@@ -54,19 +54,18 @@ public class NotificationServiceImpl implements NotificationService {
     }
 
     /**
-     * Notifica a l’estudiant que la seva microcredencial ha estat concedida.
+     * Notifica que una microcredencial ha estat concedida.
      *
-     * El mètode simula l’enviament del correu mitjançant una línia de log
-     * amb la informació rebuda des de l’esdeveniment Kafka.
+     * El mètode simula l’enviament de la notificació mitjançant una línia de log,
+     * utilitzant la informació rebuda a través de l’esdeveniment Kafka.
      *
      * Desenvolupat per Jaume Jurado.
      */
     @Override
     public void notifyCredentialGranted(MicrocredentialMessage microcredentialMessage) {
-        log.info("S'ha notificat per correu l'usuari {} que la microcredencial {} ha estat concedida per al curs {}.",
-                microcredentialMessage.getUserEmail(),
+        log.info("S'ha notificat que la microcredencial {} associada a la matrícula {} ha estat concedida.",
                 microcredentialMessage.getMicrocredentialId(),
-                microcredentialMessage.getCourseId());
+                microcredentialMessage.getEnrollment());
     }
 
     /**
@@ -77,9 +76,9 @@ public class NotificationServiceImpl implements NotificationService {
      *
      * Desenvolupat per Jaume Jurado.
      */
-    @Override
+   @Override
     public void notifyCredentialRejected(MicrocredentialMessage microcredentialMessage) {
-        log.info("S'ha registrat el rebuig de la microcredencial {} associada a la matrícula {}.",
+        log.info("S'ha notificat que la microcredencial {} associada a la matrícula {} ha estat rebutjada.",
                 microcredentialMessage.getMicrocredentialId(),
                 microcredentialMessage.getEnrollment());
     }

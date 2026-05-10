@@ -24,7 +24,18 @@ public class CourseRepositoryImpl implements CourseRepository {
         return jpaCourseRepository.getCourseById(courseId).map(CourseEntity::toDomain);
     }   
 
-    //TODO findCourses()
+    @Override
+    public Course save(Course course) {
+        return jpaCourseRepository.save(CourseEntity.fromDomain(course)).toDomain();
+    }
+    
+    @Override
+    public List<Course> findCourses() {
+        return jpaCourseRepository.findAll()
+                .stream()
+                .map(CourseEntity::toDomain)
+                .collect(Collectors.toList());
+    }
     //TODO createCourse()
     //TODO modifyCourseDetails()
     //TODO openEnrollmentCourse()
