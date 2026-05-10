@@ -4,6 +4,10 @@ import edu.uoc.epcsd.microcredential.domain.Microcredential;
 import edu.uoc.epcsd.microcredential.domain.repository.MicrocredentialRepository;
 import lombok.RequiredArgsConstructor;
 import java.util.Optional;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import edu.uoc.epcsd.microcredential.domain.MicrocredentialStatus;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -18,11 +22,31 @@ public class MicrocredentialRepositoryImpl implements MicrocredentialRepository 
                 .map(MicrocredentialEntity::toDomain);
     } 
 
-    //TODO: createMicrocredential() 
-    
-    //TODO: updateStatusPendingMicrocredential()
-    
-    //TODO: getPendingMicrocredentialRequests()
+    @Override
+    public List<Microcredential> findByStatus(MicrocredentialStatus status) {
+
+        return jpaMicrocredentialRepository.findByStatus(status)
+                .stream()
+                .map(MicrocredentialEntity::toDomain)
+                .collect(Collectors.toList());
+    }
+
+    /**
+     * Desa una microcredencial al repositori persistent.
+     *
+     * El mètode transforma l’objecte de domini a entitat JPA,
+     * executa la persistència i retorna l’objecte actualitzat
+     * novament convertit a domini.
+     *
+     * Desenvolupat per Jaume Jurado.
+     */
+    @Override
+    public Microcredential save(Microcredential microcredential) {
+
+        return jpaMicrocredentialRepository
+                .save(MicrocredentialEntity.fromDomain(microcredential))
+                .toDomain();
+    }
 
     
 }

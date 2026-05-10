@@ -38,19 +38,50 @@ public class NotificationServiceImpl implements NotificationService {
         }
     }
     
+    /**
+     * Notifica als administradors que existeix una microcredencial pendent de validació.
+     *
+     * El mètode simula l’enviament de la notificació mitjançant una línia de log,
+     * tal com es demana a l’enunciat de la pràctica.
+     *
+     * Desenvolupat per Jaume Jurado.
+     */
     @Override
     public void notifyCredentialPending(MicrocredentialMessage microcredentialMessage) {
-        // TODO: Complete the implementation
+        log.info("S'ha notificat als administradors que la microcredencial {} està pendent de validació per a la matrícula {}.",
+                microcredentialMessage.getMicrocredentialId(),
+                microcredentialMessage.getEnrollment());
     }
 
-	@Override
-	public void notifyCredentialGranted(MicrocredentialMessage microcredentialMessage) {
-		// TODO: Complete the implementation
-	}
+    /**
+     * Notifica a l’estudiant que la seva microcredencial ha estat concedida.
+     *
+     * El mètode simula l’enviament del correu mitjançant una línia de log
+     * amb la informació rebuda des de l’esdeveniment Kafka.
+     *
+     * Desenvolupat per Jaume Jurado.
+     */
+    @Override
+    public void notifyCredentialGranted(MicrocredentialMessage microcredentialMessage) {
+        log.info("S'ha notificat per correu l'usuari {} que la microcredencial {} ha estat concedida per al curs {}.",
+                microcredentialMessage.getUserEmail(),
+                microcredentialMessage.getMicrocredentialId(),
+                microcredentialMessage.getCourseId());
+    }
 
-	@Override
-	public void notifyCredentialRejected(MicrocredentialMessage microcredentialMessage) {
-		// TODO: Complete the implementation
-	}
+    /**
+     * Notifica que una microcredencial ha estat rebutjada.
+     *
+     * El mètode deixa constància mitjançant log del rebuig de la microcredencial
+     * associada a una matrícula concreta.
+     *
+     * Desenvolupat per Jaume Jurado.
+     */
+    @Override
+    public void notifyCredentialRejected(MicrocredentialMessage microcredentialMessage) {
+        log.info("S'ha registrat el rebuig de la microcredencial {} associada a la matrícula {}.",
+                microcredentialMessage.getMicrocredentialId(),
+                microcredentialMessage.getEnrollment());
+    }
 
 }

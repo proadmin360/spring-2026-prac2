@@ -11,4 +11,9 @@ public interface MicrocredentialService {
 	
 	List<Microcredential> getPendingMicrocredentialRequests();
 
+	Boolean rejectPendingMicrocredential(@NotNull Long microcredentialId);
+
+	Boolean requestCourseMicrocredentials(@NotNull Long courseId);
+
+	Boolean approvePendingMicrocredential(@NotNull Long microcredentialId);
 }

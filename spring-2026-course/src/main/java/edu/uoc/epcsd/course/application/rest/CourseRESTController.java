@@ -18,6 +18,8 @@ import javax.validation.constraints.NotNull;
 import java.net.URI;
 import java.util.List;
 
+import edu.uoc.epcsd.course.domain.service.EnrollmentService;
+
 @Log4j2
 @RequiredArgsConstructor
 @RestController
@@ -25,6 +27,7 @@ import java.util.List;
 public class CourseRESTController {
 
     private final CourseService courseService;
+    private final EnrollmentService enrollmentService;
    
     @GetMapping("/{courseId}")
     public ResponseEntity<Course> getCourseById(@PathVariable @NotNull Long courseId) {
@@ -33,6 +36,25 @@ public class CourseRESTController {
         return courseService.getCourseById(courseId)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
+    }
+    
+    /**
+     * Recupera totes les inscripcions associades a un curs concret.
+     *
+     * Aquest endpoint permet obtenir la llista d’alumnes matriculats
+     * en un curs determinat a partir del seu identificador.
+     *
+     * Desenvolupat per Jaume Jurado.
+     */
+    @GetMapping("/{courseId}/enrollments")
+    public ResponseEntity<List<Enrollment>> getEnrollmentsByCourse(
+            @PathVariable @NotNull Long courseId) {
+
+        log.trace("getEnrollmentsByCourse");
+
+        return ResponseEntity.ok(
+                enrollmentService.getEnrollmentsByCourse(courseId)
+        );
     }
 
     // TODO findCourses()
