@@ -36,6 +36,14 @@ public class MicrocredentialServiceImpl implements MicrocredentialService {
 		return microcredentialRepository.getMicrocredentialById(microcredentialId);
 	}
 
+	/**
+	 * Consulta les microcredencials pendents de validació.
+	 *
+	 * El mètode recupera del repositori totes les microcredencials
+	 * que es troben en estat REQUESTED.
+	 *
+	 * Desenvolupat per Jaume Jurado.
+	 */
 	@Override
 	public List<Microcredential> getPendingMicrocredentialRequests() {
 		return microcredentialRepository.findByStatus(MicrocredentialStatus.REQUESTED);
@@ -118,14 +126,14 @@ public class MicrocredentialServiceImpl implements MicrocredentialService {
 
 
 	/**
- * Sol·licita la generació de microcredencials per a totes les inscripcions d’un curs.
- *
- * El mètode consulta el microservei de cursos per obtenir les inscripcions associades
- * al curs indicat, crea una microcredencial pendent per a cada inscripció i publica
- * una notificació asíncrona perquè els administradors en siguin informats.
- *
- * Desenvolupat per Jaume Jurado.
- */
+	 * Sol·licita la generació de microcredencials per a totes les inscripcions d’un curs.
+	 *
+	 * El mètode consulta el microservei de cursos per obtenir les inscripcions associades
+	 * al curs indicat, crea una microcredencial pendent per a cada inscripció i publica
+	 * una notificació asíncrona perquè els administradors en siguin informats.
+	 *
+	 * Desenvolupat per Jaume Jurado.
+	 */
 	@Override
 	public Boolean requestCourseMicrocredentials(@NotNull Long courseId) {
 
@@ -164,9 +172,4 @@ public class MicrocredentialServiceImpl implements MicrocredentialService {
 
 		return true;
 	}
-	
-
-	
-	//TODO: getPendingMicrocredentialRequests() 
-    
 }

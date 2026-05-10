@@ -58,7 +58,7 @@ public class CourseRESTController {
     }
 
     // TODO findCourses()
-    // TODO getEnrollmentsByCourse()
+    
     // TODO getEnrolledStudents()
     // TODO createCourse()
     // TODO modifyCourseDetails()

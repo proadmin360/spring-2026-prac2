@@ -22,6 +22,16 @@ public class MicrocredentialRepositoryImpl implements MicrocredentialRepository 
                 .map(MicrocredentialEntity::toDomain);
     } 
 
+
+    /**
+     * Recupera les microcredencials filtrades pel seu estat.
+     *
+     * El mètode consulta el repositori JPA i transforma les entitats
+     * persistents en objectes del domini.
+     *
+     * Desenvolupat per Jaume Jurado.
+     */
+
     @Override
     public List<Microcredential> findByStatus(MicrocredentialStatus status) {
 
