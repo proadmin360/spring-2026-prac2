@@ -40,11 +40,9 @@ public class NotificationServiceImpl implements NotificationService {
     
     /**
      * Notifica als administradors que existeix una microcredencial pendent de validació.
-     *
-     * El mètode simula l’enviament de la notificació mitjançant una línia de log,
-     * tal com es demana a l’enunciat de la pràctica.
-     *
-     * Desenvolupat per Jaume Jurado.
+     * Notifiquem als administradore conforme hi ha una microcredential pendent de validació. Aquest
+     * métdo simula l'enviament de la notificación a través d'una línia de log, respectant així la sol·licitut de
+     * l'enunciat de la práctica
      */
     @Override
     public void notifyCredentialPending(MicrocredentialMessage microcredentialMessage) {
@@ -54,12 +52,8 @@ public class NotificationServiceImpl implements NotificationService {
     }
 
     /**
-     * Notifica que una microcredencial ha estat concedida.
-     *
-     * El mètode simula l’enviament de la notificació mitjançant una línia de log,
-     * utilitzant la informació rebuda a través de l’esdeveniment Kafka.
-     *
-     * Desenvolupat per Jaume Jurado.
+     * Notifiquem que una microcredencial ha estat concedida. Aquest métode simula l’enviament de 
+     * la notificació a traveés d'una línia de log on utilitzem la informació rebuda a través de l’esdeveniment Kafka.
      */
     @Override
     public void notifyCredentialGranted(MicrocredentialMessage microcredentialMessage) {
@@ -69,12 +63,8 @@ public class NotificationServiceImpl implements NotificationService {
     }
 
     /**
-     * Notifica que una microcredencial ha estat rebutjada.
-     *
-     * El mètode deixa constància mitjançant log del rebuig de la microcredencial
-     * associada a una matrícula concreta.
-     *
-     * Desenvolupat per Jaume Jurado.
+     * Notifiquem que una microcredencial ha estat rebutjada. Aquest métode deixa constància mitjançant log 
+     * que la microcredencial associada a una matrícula concreta ha estat rebutjada.
      */
    @Override
     public void notifyCredentialRejected(MicrocredentialMessage microcredentialMessage) {

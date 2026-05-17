@@ -28,12 +28,8 @@ public class MicrocredentialRESTController {
     
 
     /**
-     * Recupera totes les microcredencials pendents de validació.
-     *
-     * Aquest endpoint permet a l’administrador consultar les peticions
-     * de microcredencial que encara es troben en estat REQUESTED.
-     *
-     * Desenvolupat per Jaume Jurado.
+     * Recuperem totes les credencials que estan pendents de validació.
+     * Podem consultar les peticions de micro. en estat REQUESTED
      */
     @GetMapping("/pending")
     public ResponseEntity<?> getPendingMicrocredentialRequests() {
@@ -44,12 +40,8 @@ public class MicrocredentialRESTController {
 
 
     /**
-     * Aprova una microcredencial pendent.
-     *
-     * Aquest endpoint permet validar una petició existent i canviar-ne
-     * l’estat a GRANTED quan encara es troba pendent de revisió.
-     *
-     * Desenvolupat per Jaume Jurado.
+     * Aprovem una micro. que está en pendent i canviar a grantend
+     * quan encara está pendent de revisió
      */
     @PatchMapping("/{microcredentialId}/approve")
     public ResponseEntity<Boolean> approvePendingMicrocredential(
@@ -65,12 +57,10 @@ public class MicrocredentialRESTController {
     }
 
     /**
-     * Rebutja una microcredencial pendent.
-     *
-     * Aquest endpoint permet marcar una petició existent com a REJECTED
-     * sempre que encara es trobi pendent de validació.
-     *
-     * Desenvolupat per Jaume Jurado.
+     * Rebutjem una microcredencial pendent. 
+     * 
+     * Aquest endpoint ens permet marcar una petició existent 
+     * com a REJECTED sempre i quan, que encara es trobi pendent de validació.
      */
     @PatchMapping("/{microcredentialId}/reject")
     public ResponseEntity<Boolean> rejectPendingMicrocredential(
@@ -86,12 +76,10 @@ public class MicrocredentialRESTController {
     }
 
     /**
-     * Sol·licita microcredencials per a un curs completat.
-     *
-     * Aquest endpoint inicia la creació de peticions de microcredencial
+     * Sol·licita microcredencials per a un curs completat. 
+     * 
+     * Aquest endpoint inicia la creació de peticions de microcredencial 
      * a partir de les inscripcions associades al curs indicat.
-     *
-     * Desenvolupat per Jaume Jurado.
      */
     @PostMapping("/courses/{courseId}/request")
     public ResponseEntity<Boolean> requestCourseMicrocredentials(

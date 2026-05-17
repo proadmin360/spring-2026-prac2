@@ -25,7 +25,11 @@ public class CourseRESTController {
 
     private final CourseService courseService;
     private final EnrollmentService enrollmentService;
-   
+
+    /**
+     * Consultem un curs pel seu identificador on es retorna el curs 
+     * si existeix o una resposta 404 si no es troba cap curs amb l’identificador indicat.
+     */
     @GetMapping("/{courseId}")
     public ResponseEntity<Course> getCourseById(@PathVariable @NotNull Long courseId) {
         log.trace("getCourseById");
@@ -36,12 +40,8 @@ public class CourseRESTController {
     }
     
     /**
-     * Recupera totes les inscripcions associades a un curs concret.
-     *
-     * Aquest endpoint permet obtenir la llista d’alumnes matriculats
-     * en un curs determinat a partir del seu identificador.
-     *
-     * Desenvolupat per Jaume Jurado.
+     * Recuperem totes les inscripcions associades a un curs concret. Aquest endpoint 
+     * permet obtenir la llista d’alumnes matriculats en un curs determinat a partir del seu identificador.
      */
     @GetMapping("/{courseId}/enrollments")
     public ResponseEntity<List<Enrollment>> getEnrollmentsByCourse(
@@ -55,9 +55,7 @@ public class CourseRESTController {
     }
 
     /**
-     * Recupera la llista de cursos disponibles.
-     *
-     * Desenvolupat per Jaume Jurado.
+     * Recuperem la llista de cursos que estan disponibles.
      */
     @GetMapping
     public ResponseEntity<List<Course>> findCourses() {
@@ -65,9 +63,7 @@ public class CourseRESTController {
     }
     
     /**
-     * Crea un nou curs al sistema.
-     *
-     * Desenvolupat per Jaume Jurado.
+     * Creem un nou curs al sistema.
      */
     @PostMapping
     public ResponseEntity<Course> createCourse(@Valid @RequestBody CourseRequest request) {
@@ -92,9 +88,7 @@ public class CourseRESTController {
     }
     
     /**
-     * Modifica les dades principals d’un curs existent.
-     *
-     * Desenvolupat per Jaume Jurado.
+     * Modifiquem les dades principals d’un curs existent.
      */
     @PutMapping("/{courseId}")
     public ResponseEntity<Course> modifyCourseDetails(
@@ -111,9 +105,7 @@ public class CourseRESTController {
     }
 
     /**
-     * Obre el període d’inscripció d’un curs.
-     *
-     * Desenvolupat per Jaume Jurado.
+     * Obrim el període d’inscripció d’un curs.
      */
     @PatchMapping("/{courseId}/open-enrollment")
     public ResponseEntity<Boolean> openEnrollment(@PathVariable @NotNull Long courseId) {
@@ -127,9 +119,7 @@ public class CourseRESTController {
     }
 
     /**
-     * Tanca el període d’inscripció d’un curs.
-     *
-     * Desenvolupat per Jaume Jurado.
+     * Es tanca el període d’inscripció d’un curs.
      */
     @PatchMapping("/{courseId}/close-enrollment")
     public ResponseEntity<Boolean> closeEnrollment(@PathVariable @NotNull Long courseId) {
@@ -144,9 +134,7 @@ public class CourseRESTController {
     
 
     /**
-     * Tanca un curs existent.
-     *
-     * Desenvolupat per Jaume Jurado.
+     * Es tanca un curs existent.
      */
     @PatchMapping("/{courseId}/close")
     public ResponseEntity<Boolean> closeCourse(@PathVariable @NotNull Long courseId) {

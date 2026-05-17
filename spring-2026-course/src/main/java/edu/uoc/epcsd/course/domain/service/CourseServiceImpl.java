@@ -48,8 +48,6 @@ public class CourseServiceImpl implements CourseService {
     
     /**
      * Retorna la llista de cursos disponibles al sistema.
-     *
-     * Desenvolupat per Jaume Jurado.
      */
     @Override
     public List<Course> findCourses() {
@@ -57,12 +55,9 @@ public class CourseServiceImpl implements CourseService {
     }
 
     /**
-     * Modifica les dades d’un curs existent.
+     * En permet modifiacar les dades d’un curs existent.
      *
-     * El mètode comprova que el curs existeixi abans de desar-ne
-     * les noves dades.
-     *
-     * Desenvolupat per Jaume Jurado.
+     * TAmbé comproven que el curs existeixi abans de desar-ne les noves dades (!important).
      */
     @Override
     public Course modifyCourseDetails(Long courseId, Course course) {
@@ -79,11 +74,7 @@ public class CourseServiceImpl implements CourseService {
     }
 
     /**
-     * Crea un nou curs al sistema.
-     *
-     * El mètode desa el curs rebut al repositori.
-     *
-     * Desenvolupat per Jaume Jurado.
+     * Creem un nou curs al sistema desant el curs al repositori
      */
     @Override
     public Course createCourse(Course course) {
@@ -91,12 +82,8 @@ public class CourseServiceImpl implements CourseService {
     }
 
     /**
-     * Obre el període d’inscripció d’un curs existent.
-     *
-     * El mètode comprova que el curs existeixi i actualitza
-     * el seu estat a ENROLLMENT_OPEN.
-     *
-     * Desenvolupat per Jaume Jurado.
+     * S'Obre el període d’inscripció d’un curs existent on es comprova
+     * que existeixi el curs i actualizta el seu estat a ENROLLMENT_OPEN
      */
     @Override
     public Boolean openEnrollment(Long courseId) {
@@ -116,12 +103,9 @@ public class CourseServiceImpl implements CourseService {
     }
 
     /**
-     * Tanca el període d’inscripció d’un curs existent.
+     * Tanquem el període d'inscripció, comprovem que el curs
+     * existeix y canviem l'entat a ACTIVE
      *
-     * El mètode comprova que el curs existeixi i actualitza
-     * el seu estat a ACTIVE.
-     *
-     * Desenvolupat per Jaume Jurado.
      */
     @Override
     public Boolean closeEnrollment(Long courseId) {
@@ -141,12 +125,7 @@ public class CourseServiceImpl implements CourseService {
     }
     
     /**
-     * Tanca un curs existent.
-     *
-     * El mètode comprova que el curs existeixi i, en cas afirmatiu,
-     * actualitza el seu estat a CLOSED i desa els canvis.
-     *
-     * Desenvolupat per Jaume Jurado.
+     * Es tanca un curs que existeix y canviem l'etat a CLOSED.
      */
     @Override
     public Boolean closeCourse(Long courseId) {

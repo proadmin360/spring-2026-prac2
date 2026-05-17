@@ -24,11 +24,19 @@ public class CourseRepositoryImpl implements CourseRepository {
         return jpaCourseRepository.getCourseById(courseId).map(CourseEntity::toDomain);
     }   
 
+    /**
+     * Desa un curs al repositori persistent. El mètode transforma l’objecte de domini a entitat JPA,
+     * executa la persistència i retorna el curs actualitzat.
+     */
     @Override
     public Course save(Course course) {
         return jpaCourseRepository.save(CourseEntity.fromDomain(course)).toDomain();
     }
     
+    /**
+     * Recuperem tots els cursos disponibles. Aquest mètode consulta el repositori JPA i transforma
+     * les entitats persistents en objectes de domini.
+     */
     @Override
     public List<Course> findCourses() {
         return jpaCourseRepository.findAll()
@@ -36,10 +44,7 @@ public class CourseRepositoryImpl implements CourseRepository {
                 .map(CourseEntity::toDomain)
                 .collect(Collectors.toList());
     }
-    //TODO createCourse()
-    //TODO modifyCourseDetails()
-    //TODO openEnrollmentCourse()
-    //TODO closeEnrollmentCourse()
+    
     //TODO closeGradeReports()
     //TODO enrollInCourse()
 	    

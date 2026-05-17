@@ -37,12 +37,7 @@ public class MicrocredentialServiceImpl implements MicrocredentialService {
 	}
 
 	/**
-	 * Consulta les microcredencials pendents de validació.
-	 *
-	 * El mètode recupera del repositori totes les microcredencials
-	 * que es troben en estat REQUESTED.
-	 *
-	 * Desenvolupat per Jaume Jurado.
+	 * Consulta les micro. que tenim pendents de validació.
 	 */
 	@Override
 	public List<Microcredential> getPendingMicrocredentialRequests() {
@@ -50,14 +45,9 @@ public class MicrocredentialServiceImpl implements MicrocredentialService {
 	}
 	
 	/**
-	 * Aprova una microcredencial pendent.
-	 *
-	 * El mètode valida que la microcredencial existeixi i que es trobi
-	 * en estat REQUESTED. Si la validació és correcta, l’estat passa
-	 * a GRANTED, s’actualitza la data d’assignació i es publica
-	 * una notificació asíncrona mitjançant Kafka.
-	 *
-	 * Desenvolupat per Jaume Jurado.
+	 * Aprovem una micro. pendent sempre que la mirco. 
+	 * existeixi en estat REQUESTED, canviem estat a a GRANTED. Actualitzem
+	 * data assignació y es publica una notificació asíncrona a través de KAFKA.
 	 */
 	@Override
 	public Boolean approvePendingMicrocredential(@NotNull Long microcredentialId) {
@@ -93,13 +83,8 @@ public class MicrocredentialServiceImpl implements MicrocredentialService {
 
 	
 	/**
-	 * Gestiona el rebuig d’una microcredencial pendent de validació.
-	 *
-	 * El mètode comprova que la microcredencial existeixi i que es trobi
-	 * en estat REQUESTED abans d’actualitzar-ne l’estat a REJECTED
-	 * i desar els canvis al sistema.
-	 *
-	 * Desenvolupat per Jaume Jurado.
+	 * Rebutjem la micro. que está pendent de validació sempre
+	 * que existeixi en estat REQUESTED. Canviem a esta REJECTED
 	 */
 	@Override
 	public Boolean rejectPendingMicrocredential(@NotNull Long microcredentialId) {
@@ -135,12 +120,9 @@ public class MicrocredentialServiceImpl implements MicrocredentialService {
 
 	/**
 	 * Sol·licita la generació de microcredencials per a totes les inscripcions d’un curs.
-	 *
-	 * El mètode consulta el microservei de cursos per obtenir les inscripcions associades
-	 * al curs indicat, crea una microcredencial pendent per a cada inscripció i publica
+	 * Consultem el microservei de cursos per obtenir les inscripcions associades
+	 * al curs indicat i es crea una microcredencial pendent per a cada inscripció. Publiquem
 	 * una notificació asíncrona perquè els administradors en siguin informats.
-	 *
-	 * Desenvolupat per Jaume Jurado.
 	 */
 	@Override
 	public Boolean requestCourseMicrocredentials(@NotNull Long courseId) {

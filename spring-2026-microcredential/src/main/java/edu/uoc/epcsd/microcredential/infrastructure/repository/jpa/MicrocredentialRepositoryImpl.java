@@ -24,12 +24,10 @@ public class MicrocredentialRepositoryImpl implements MicrocredentialRepository 
 
 
     /**
-     * Recupera les microcredencials filtrades pel seu estat.
-     *
-     * El mètode consulta el repositori JPA i transforma les entitats
+     * Es recupera les microcredencials filtrades pel seu estat.
+     * 
+     * Consultem el repositori JPA i transformem les entitats
      * persistents en objectes del domini.
-     *
-     * Desenvolupat per Jaume Jurado.
      */
 
     @Override
@@ -42,13 +40,10 @@ public class MicrocredentialRepositoryImpl implements MicrocredentialRepository 
     }
 
     /**
-     * Desa una microcredencial al repositori persistent.
-     *
-     * El mètode transforma l’objecte de domini a entitat JPA,
-     * executa la persistència i retorna l’objecte actualitzat
+     * Es desa una microcredencial al repositori persistent i transformem 
+     * l’objecte de domini a entitat JPA,
+     * executant la persistència i retornant l’objecte actualitzat
      * novament convertit a domini.
-     *
-     * Desenvolupat per Jaume Jurado.
      */
     @Override
     public Microcredential save(Microcredential microcredential) {

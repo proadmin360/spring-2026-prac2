@@ -53,6 +53,10 @@ public class EnrollmentEntity implements DomainTranslatable<Enrollment> {
                 .build();
     }
 
+    /**
+     * Convertim l'entitat JPA d’inscripció en objecte de domini i, 
+     * informem l’identificador del curs associat quan existeix la relació amb CourseEntity.
+     */
     @Override
     public Enrollment toDomain() {
         return Enrollment.builder()
