@@ -118,6 +118,18 @@ public class CourseRESTController {
         return ResponseEntity.ok(true);
     }
 
+
+    /**
+     * Consulta els estudiants inscrits en un curs.
+     */
+    @GetMapping("/{courseId}/students")
+    public ResponseEntity<List<Enrollment>> getEnrolledStudents(@PathVariable Long courseId) {
+
+        List<Enrollment> enrollments = courseService.getEnrolledStudents(courseId);
+
+        return ResponseEntity.ok(enrollments);
+    }
+
     /**
      * Es tanca el període d’inscripció d’un curs.
      */
@@ -150,8 +162,35 @@ public class CourseRESTController {
     
     // TODO getEnrolledStudents()    
     // TODO enrollInCourse()
-    // TODO closeGradeReports()
     
+    /**
+     * Es tanca l'acta de qualificacions d’un curs.
+     */
+    @PatchMapping("/{courseId}/close-grade-reports")
+    public ResponseEntity<Boolean> closeGradeReports(@PathVariable Long courseId) {
+
+        Boolean result = courseService.closeGradeReports(courseId);
+
+        if (!result) {
+            return ResponseEntity.notFound().build();
+        }
+
+        return ResponseEntity.ok(true);
+    }
+
+    @PostMapping("/{courseId}/enroll")
+    public ResponseEntity<Boolean> enrollInCourse(
+            @PathVariable Long courseId,
+            @RequestParam String userEmail) {
+
+        Boolean result = courseService.enrollInCourse(courseId, userEmail);
+
+        if (!result) {
+            return ResponseEntity.notFound().build();
+        }
+
+        return ResponseEntity.ok(true);
+    }
     
  
 }
